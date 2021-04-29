@@ -75,7 +75,7 @@ class FrontierController extends Controller
         $latestwo_post = News::latest()->limit(2)->get();
         $services = Service::whereServiceType(Service::SERVICE)->get();
 
-        return view('pages.service', compact('latestwo_post'));
+        return view('pages.service', compact('latestwo_post', 'services'));
     }
 
     public function news()
